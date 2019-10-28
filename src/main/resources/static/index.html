@@ -24,7 +24,7 @@
     $(document).ready(function() {openSocket();});
     function openSocket() {
         if(stompClient==null){
-            var socket = new SockJS('http://localhost:8087/websocket?token=kl');
+            var socket = new SockJS('http://localhost:9970/websocket?token=kl');
             stompClient = Stomp.over(socket);
             stompClient.connect({token:"kl"}, function(frame) {
                 stompClient.subscribe('/topic/pullLogger', function(event) {
