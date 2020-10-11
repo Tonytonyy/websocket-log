@@ -1,6 +1,7 @@
-package com.kl.websocket;
+package com.kl.websocket.log;
 
 import com.kl.websocket.disruptor.*;
+import com.kl.websocket.log.LoggerMessage;
 import com.lmax.disruptor.RingBuffer;
 import com.lmax.disruptor.dsl.Disruptor;
 import org.springframework.beans.factory.annotation.Autowired;

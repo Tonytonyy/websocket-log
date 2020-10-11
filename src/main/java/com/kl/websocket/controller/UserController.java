@@ -6,6 +6,7 @@
 
 package com.kl.websocket.controller;
 
+import com.kl.websocket.entity.User;
 import com.kl.websocket.service.UserService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,5 +22,13 @@ public class UserController {
 
     public UserController(final UserService userService){
         this.userService = userService;
+    }
+
+    public void insert (int age,String name){
+
+    }
+
+    public void insert (User user){
+
     }
 }

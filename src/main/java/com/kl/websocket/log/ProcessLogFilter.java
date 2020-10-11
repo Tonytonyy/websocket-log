@@ -1,11 +1,10 @@
-package com.kl.websocket;
+package com.kl.websocket.log;
 
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.filter.Filter;
 import ch.qos.logback.core.spi.FilterReply;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Component;
+import com.kl.websocket.log.LoggerDisruptorQueue;
+import com.kl.websocket.log.LoggerMessage;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;

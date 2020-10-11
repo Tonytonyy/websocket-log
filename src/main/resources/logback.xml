@@ -9,7 +9,7 @@
             <pattern>${CONSOLE_LOG_PATTERN}</pattern>
             <charset>utf8</charset>
         </encoder>
-        <filter class="com.kl.websocket.ProcessLogFilter"></filter>
+        <filter class="com.kl.websocket.log.ProcessLogFilter"></filter>
     </appender>
     <root level="INFO">
         <appender-ref ref="FILE" />

@@ -34,7 +34,7 @@ public class UserService {
                 .switchIfEmpty(Mono.error(new NoClassDefFoundError()));
     }
     Mono<User> createOrUpdate(final User user) {
-        this.data.put(user.getId(), user);
+        this.data.put(user.getUsername(), user);
         return Mono.just(user);
     }
     Mono<User> delete(String id){

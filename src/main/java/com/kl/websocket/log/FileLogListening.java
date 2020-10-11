@@ -1,5 +1,6 @@
-package com.kl.websocket;
+package com.kl.websocket.log;
 
+import com.kl.websocket.log.LoggerDisruptorQueue;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

@@ -1,6 +1,6 @@
 package com.kl.websocket.disruptor;
 
-import com.kl.websocket.LoggerMessage;
+import com.kl.websocket.log.LoggerMessage;
 
 /**
  * Created by kl on 2018/8/24.

@@ -1,5 +1,6 @@
 package com.kl.websocket;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableScheduling
 @RestController
+@MapperScan("com.kl.websocket.mapper")
 public class WebsocketApplication {
     private Logger logger = LoggerFactory.getLogger(WebsocketApplication.class);
 
@@ -24,7 +26,7 @@ public class WebsocketApplication {
     @Scheduled(fixedRate = 1000)
     public void outputLogger() {
         logger.info("测试日志输出" + info++);
-        throw new RuntimeException();
+//        throw new RuntimeException();
     }
 
     @RequestMapping("/hello")
