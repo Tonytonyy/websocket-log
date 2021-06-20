@@ -21,7 +21,7 @@ public class WebsocketApplication {
 
     int info = 1;
 
-    @Scheduled(fixedRate = 1000)
+    @Scheduled(fixedRate = 1000000)
     public void outputLogger() {
         logger.info("测试日志输出" + info++);
         throw new RuntimeException();

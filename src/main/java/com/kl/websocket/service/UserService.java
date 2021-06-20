@@ -40,5 +40,9 @@ public class UserService {
     Mono<User> delete(String id){
         return Mono.justOrEmpty(this.data.remove(id));
     }
+    public User query(){
+        User user = new User("1","qq.com","zq");
+        return user;
+    }
 
 }

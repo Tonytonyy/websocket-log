@@ -6,7 +6,10 @@
 
 package com.kl.websocket.controller;
 
+import com.kl.websocket.api.CommonResult;
+import com.kl.websocket.entity.User;
 import com.kl.websocket.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,9 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    private final UserService userService;
 
-    public UserController(final UserService userService){
-        this.userService = userService;
+    @Autowired
+    private  UserService userService;
+
+    @RequestMapping(value = "/query")
+    public CommonResult<User> query(){
+        return CommonResult.success(userService.query());
     }
 }
